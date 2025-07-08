@@ -1,1 +1,0 @@
-![[service-ppc-amazon-ppc-services.webp]]
