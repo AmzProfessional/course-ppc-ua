@@ -117,4 +117,4 @@
 - Чи готові налаштувати ставки і плейсменти для тестової кампанії?
 
 **Наступний крок**: У Кроці 4 ми розглянемо запуск Sponsored Brands і Sponsored Display кампаній.
-### [[Крок 4 — Запуск Sponsored Brands і Sponsored Display кампаній]] →
+### [[Крок 4 — Запуск Sponsored Brands]] →
