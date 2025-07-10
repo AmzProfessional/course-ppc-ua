@@ -110,12 +110,12 @@
     - Виберіть ASIN/SKU ("SqueezeBottles346"), формат Video, ключ "baby bottle" (broad).
     - Додайте негативний ключ (наприклад, "baby bottle" з exact match кампанії).
     - Виберіть відео з лістингу, перевірте заставку.
-    - Бюджет: $5/день, ставка: $0.75, Down Only.
+    - Бюджет: $ 5/день, ставка: $ 0.75, Down Only.
     - Запустіть і перевірте статус (Delivering).
 3. **Sponsored Display**:
     - Створіть кампанію: "SD_Category_BabyBottles_ASIN123_Test".
     - Виберіть ASIN/SKU, Optimize for Conversions, категорію "Baby Bottles".
-    - Refine: ціна $ 0–$ 20, рейтинг <4.
+    - Refine: ціна $ 0 – $ 20, рейтинг < 4.
     - Виберіть відео, додайте Headline ("Condiment Squeeze Bottles").
     - Бюджет: $ 10/день, ставка: $ 0.50, Down Only.
     - Запустіть і перевірте статус (Delivering).

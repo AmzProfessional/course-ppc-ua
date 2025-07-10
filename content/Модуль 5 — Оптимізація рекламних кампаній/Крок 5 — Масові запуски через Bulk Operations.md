@@ -32,7 +32,7 @@
         - **Operation**: Create.
         - **Campaign Name**: Наприклад, "SP_Keyword_Exact_BabyBottle_ASIN123".
         - **Portfolio ID**: Візьміть ID із вкладки Portfolios у завантаженому файлі (необов’язково).
-        - **Start Date**: Вкажіть дату запуску (наприклад, 2025-07-10).
+        - **Start Date**: Вкажіть дату запуску (наприклад, завтра).
         - **Targeting Type**: Manual.
         - **Daily Budget**: $ 5–10.
         - **Bidding Strategy**: Down Only.
@@ -136,5 +136,4 @@
 - **Досягнення**: Ви завершили Модуль 5, опанувавши створення та оптимізацію Sponsored Products, Sponsored Brands і Sponsored Display кампаній, а також масові запуски через Bulk Operations.
 
 **Наступні кроки**: Застосовуйте отримані навички для запуску та оптимізації PPC-кампаній. Аналізуйте метрики (ACoS, CTR, Conversion Rate) щотижня та масштабуйте ефективні кампанії.
-
 ### [[Крок 1 — Введення в глибоку перевірку та оптимізацію]] →
