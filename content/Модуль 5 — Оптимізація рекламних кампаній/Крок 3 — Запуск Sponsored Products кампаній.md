@@ -7,6 +7,8 @@
 
 > [!note] Sponsored Products — це рекламні кампанії, які просувають окремі товари через ключові слова або таргетинг на продукти, підвищуючи видимість і продажі.
 
+![[Pasted image 20250711192113.png]]
+
 **Чому це важливо?**
 
 - **Точний таргетинг**: Дозволяє показувати рекламу за релевантними ключами (exact, phrase, broad) або ASIN конкурентів.
@@ -27,7 +29,7 @@
 1. **Перехід до створення**:
     - У Seller Central → Advertising → Campaign Manager → Create Campaign → Sponsored Products.
 2. **Назва кампанії (Naming)**:
-    - Використовуйте формат: "SP_Keyword_[MatchType]_[Key]_[ASIN]_[Test]".
+    - Використовуйте формат: "SP Keyword MatchType Key ASIN Test".
     - Приклад: "SP_Keyword_Exact_BabyBottle_ASIN123_Test".
 3. **Вибір продукту**:
     - Введіть ASIN або SKU товару (наприклад, "SqueezeBottles346").
@@ -74,7 +76,6 @@
 #### **Завдання**: Запустіть тестову Sponsored Products кампанію для товару.
 
 **Інструкція**:
-
 1. Увійдіть у Seller Central → Advertising → Campaign Manager → Create Campaign → Sponsored Products.
 2. Виберіть товар (наприклад, "пластикова дитяча пляшечка", ASIN123, SKU SqueezeBottles346).
 3. **Налаштування**:
@@ -93,7 +94,6 @@
     - Обґрунтування вибору ключа і налаштувань.
 
 **Результат**:
-
 - Опис: "Кампанія SP_Keyword_Exact_BabyBottle_ASIN123_Test, ключ ‘baby bottle’ (exact), SKU SqueezeBottles346, ставка $ 0.75, Down Only, Top of Search +50%, бюджет $ 5/день."
 - Обґрунтування: "Ключ ‘baby bottle’ обрано через високу релевантність, exact match для контролю трафіку, Down Only для зниження CPC."
 
