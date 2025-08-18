@@ -36,14 +36,14 @@
         - **Portfolio ID**: Візьміть ID із вкладки Portfolios у завантаженому файлі (необов’язково).
         - **Start Date**: Вкажіть дату запуску (наприклад, завтра).
         - **Targeting Type**: Manual.
-        - **Daily Budget**: $ 5–10.
+        - **Daily Budget**: 5–10 доларів.
         - **Bidding Strategy**: Down Only.
     - **Ad Groups**:
         - **Operation**: Create.
         - **Campaign Name**: Повторіть назву кампанії.
         - **Ad Group Name**: Наприклад, "SP_Keyword_Exact_BabyBottle_ASIN123".
         - **Status**: Enabled.
-        - **Default Bid**: $ 1 (можна коригувати).
+        - **Default Bid**: 1 долар (можна коригувати).
     - **Product Ads**:
         - **Operation**: Create.
         - **Campaign Name, Ad Group Name**: Повторіть назви.
@@ -54,13 +54,13 @@
         - **Campaign Name, Ad Group Name**: Повторіть назви.
         - **Keyword Text**: Наприклад, "baby bottle".
         - **Match Type**: Exact/Phrase/Broad (наприклад, Exact).
-        - **Bid**: $ 0.75.
+        - **Bid**: 0.75 долар.
     - **Product Targeting** (для таргетингу на конкурентів):
         - **Operation**: Create.
         - **Campaign Name, Ad Group Name**: Повторіть назви.
         - **Product Targeting Expression**: Вкажіть ASIN конкурента (наприклад, "asin=B07XYZ123").
         - **Match Type**: Exact.
-        - **Bid**: $ 0.50.
+        - **Bid**: 0.50 долар.
 3. **Перевірка SKU і ASIN**:
     - Переконайтеся, що SKU активний (Seller Central → Inventory → Manage Inventory → Available > 0).
     - Для Product Targeting використовуйте ASIN конкурентів із топ-видачі за ключем.
@@ -84,42 +84,7 @@
 
 ---
 
-## 3. Практичне завдання
-
-#### **Завдання**: Створіть шаблон Bulk Operations для запуску двох Sponsored Products кампаній: одна на ключ, друга на ASIN конкурента.
-
-**Інструкція**:
-
-1. У Seller Central → Advertising → Campaign Manager → Bulk Operations → Download Template.
-2. Виберіть Sponsored Products, період 30 днів, вкладки: Campaigns, Ad Groups, Product Ads, Keywords, Product Targeting.
-3. **Заповнення шаблону**:
-    - **Кампанія 1 (Keyword Targeting)**:
-        - Campaigns: Operation=Create, Campaign Name="SP_Keyword_Exact_BabyBottle_ASIN123", Portfolio ID=(з вкладки Portfolios), Start Date=2025-07-10, Targeting Type=Manual, Daily Budget=$ 5, Bidding Strategy=Down Only.
-        - Ad Groups: Operation=Create, Campaign Name=повторити, Ad Group Name="SP_Keyword_Exact_BabyBottle_ASIN123", Status=Enabled, Default Bid=$ 1.
-        - Product Ads: Operation=Create, Campaign Name/Ad Group Name=повторити, SKU=SqueezeBottles346, Status=Enabled.
-        - Keywords: Operation=Create, Campaign Name/Ad Group Name=повторити, Keyword Text="baby bottle", Match Type=Exact, Bid=$ 0.75.
-    - **Кампанія 2 (Product Targeting)**:
-        - Campaigns: Operation=Create, Campaign Name="SP_Product_ASIN123_B07XYZ123", Portfolio ID=(з вкладки Portfolios), Start Date=2025-07-10, Targeting Type=Manual, Daily Budget=$ 5, Bidding Strategy=Down Only.
-        - Ad Groups: Operation=Create, Campaign Name=повторити, Ad Group Name="SP_Product_ASIN123_B07XYZ123", Status=Enabled, Default Bid=$ 1.
-        - Product Ads: Operation=Create, Campaign Name/Ad Group Name=повторити, SKU=SqueezeBottles346, Status=Enabled.
-        - Product Targeting: Operation=Create, Campaign Name/Ad Group Name=повторити, Product Targeting Expression="asin=B07XYZ123", Match Type=Exact, Bid=$ 0.50.
-4. Перевірте SKU (SqueezeBottles346) у Inventory → Available > 0.
-5. Завантажте файл у Bulk Operations → Upload File → Process Changes.
-6. Перевірте статус через 5 хвилин, виправте помилки (якщо є).
-7. Додайте кампанії до портфоліо "SqueezeBottles", якщо не вказали Portfolio ID.
-8. Запишіть результати:
-    - Опис кампаній (назви, ключ/ASIN, бюджет, ставки).
-    - Обґрунтування вибору ключів/ASIN.
-
-**Результат**:
-
-- Кампанія 1: "SP_Keyword_Exact_BabyBottle_ASIN123, ключ ‘baby bottle’ (exact), SKU=SqueezeBottles346, бюджет $ 5, ставка $ 0.75, Down Only."
-- Кампанія 2: "SP_Product_ASIN123_B07XYZ123, ASIN конкурента B07XYZ123, SKU=SqueezeBottles346, бюджет $ 5, ставка $ 0.50, Down Only."
-- Обґрунтування: "Ключ ‘baby bottle’ обрано через високу релевантність, ASIN конкурента — із топ-видачі для конкуренції."
-
----
-
-## 4. Ключові поради для Account Manager’ів
+## 3. Ключові поради для PPC Account Manager’ів
 
 - **Перевіряйте SKU/ASIN**: Неправильний SKU або ASIN призведе до помилок у запуску.
 - **Використовуйте шаблон**: Зберігайте чистий шаблон для швидкого заповнення.
@@ -129,13 +94,14 @@
 
 ---
 
-## 5. Рефлексія та завершення модуля
+## 4. Рефлексія та завершення модуля
 
-- **Перевірте себе**:
-    - Чи можете заповнити шаблон Bulk Operations для запуску кампаній?
-    - Чи вмієте перевіряти SKU і виправляти помилки в звіті?
-    - Чи готові масштабувати кампанії через Bulk Operations?
-- **Досягнення**: Ви завершили Модуль 5, опанувавши створення та оптимізацію Sponsored Products, Sponsored Brands і Sponsored Display кампаній, а також масові запуски через Bulk Operations.
+**Перевірте себе**:
+- Чи можете заповнити шаблон Bulk Operations для запуску кампаній?
+- Чи вмієте перевіряти SKU і виправляти помилки в звіті?
+- Чи зрозуміли як масштабувати кампанії через Bulk Operations?
+
+**Досягнення**: Ви завершили Модуль 5, опанувавши створення та оптимізацію Sponsored Products, Sponsored Brands і Sponsored Display кампаній, а також масові запуски через Bulk Operations.
 
 **Наступні кроки**: Застосовуйте отримані навички для запуску та оптимізації PPC-кампаній. Аналізуйте метрики (ACoS, CTR, Conversion Rate) щотижня та масштабуйте ефективні кампанії.
 ### [[Крок 1 — Введення в глибоку перевірку та оптимізацію]] →

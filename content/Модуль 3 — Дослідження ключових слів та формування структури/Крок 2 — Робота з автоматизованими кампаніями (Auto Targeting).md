@@ -26,10 +26,10 @@
     - Увійдіть у Seller Central → **Advertising** → **Campaign Manager**.
     - Виберіть маркетплейс (наприклад, США) і тип кампанії **Sponsored Products**.
     - Оберіть **Automatic Targeting** у розділі Campaign Settings.
-    - Встановіть назву кампанії (наприклад, "Auto_Kitchen_Knife_2025"), бюджет (наприклад, $ 10/день) і стратегію ставок (Dynamic Bids – Down Only).
+    - Встановіть назву кампанії (наприклад, "Auto_Kitchen_Knife_2025"), бюджет (наприклад, 10 доларів/день) і стратегію ставок (Dynamic Bids – Down Only).
 2. **Вибір типів відповідності**:
     - У розділі **Ad Group Settings** увімкніть усі типи: Close Match, Loose Match, Substitutes, Complements.
-    - Встановіть базову ставку (наприклад, $ 0.50 для Close Match, $ 0.30 для Loose Match, Substitutes і Complements).
+    - Встановіть базову ставку (наприклад, 0.50 доларів для Close Match, 0.30 доларів для Loose Match, Substitutes і Complements).
 3. **Додавання товарів**:
     - Виберіть ASIN вашого товару (наприклад, кухонний ніж).
     - Переконайтеся, що лістинг оптимізований (якісні фото, релевантний заголовок, відгуки).
@@ -56,11 +56,11 @@
 
 1. **Аналіз Search Term Report**:
     - Створіть **Search Term Report** за період "Останні 7 днів" у Campaign Manager → Reports → Sponsored Ads.
-    - Сортуйте за **Spend** (> $ 5, Sales = $ 0) для виявлення нерелевантних запитів (наприклад, "toy knife").
+    - Сортуйте за **Spend** (> 5 доларів, Sales = 0 доларів) для виявлення нерелевантних запитів (наприклад, "toy knife").
     - Сортуйте за **ACoS** (<25%) і **Conversion Rate** (>5%) для пошуку релевантних запитів (наприклад, "sharp kitchen knife").
     - **Дії**:
         - Додайте нерелевантні запити до **Negative Keywords** (Negative Exact або Negative Phrase).
-        - Перенесіть релевантні запити в нову ручну кампанію в **exact match** із вищою ставкою (наприклад, $ 0.75).
+        - Перенесіть релевантні запити в нову ручну кампанію в **exact match** із вищою ставкою (наприклад, 0.75 доларів).
 2. **Аналіз Placements Report**:
     - Створіть **Placements Report** за період "Останні 7 днів".
     - Оцініть ACoS і Conversion Rate для Top of Search, Rest of Search і Product Pages.
@@ -71,7 +71,7 @@
 3. **Аналіз Substitutes і Complements**:
     - У **Search Term Report** перевірте ASIN конкурентів (Substitutes) і доповнювальних товарів (Complements).
     - Оцініть, чи вигідні продажі (порівняйте Spend і Sales).
-    - **Приклад**: ASIN конкурента (Substitutes, Sales = $ 50, Spend = $ 10) — вигідний, додати в Product Targeting (Exact). ASIN доповнювального товару (Complements, Sales = $ 5, Spend = $ 10) — невигідний, додати до Negative Targets.
+    - **Приклад**: ASIN конкурента (Substitutes, Sales = 50 доларів, Spend = 10 доларів) — вигідний, додати в Product Targeting (Exact). ASIN доповнювального товару (Complements, Sales = 5 доларів, Spend = 10 доларів) — невигідний, додати до Negative Targets.
     - **Дії**:
         - Додайте вигідні ASIN до ручної кампанії Product Targeting (Exact).
         - Додайте невигідні ASIN до **Negative Targets** у автоматичній кампанії.
@@ -86,28 +86,27 @@
 #### **Завдання**: Налаштуйте та оптимізуйте автоматичну кампанію для пошуку нових ключових слів і конкурентів.
 
 **Інструкція**:
-1. Увійдіть у Amazon Advertising і виберіть маркетплейс (наприклад, США).
-2. Створіть автоматичну кампанію:
+1. Створіть автоматичну кампанію:
     - Виберіть **Sponsored Products** → **Automatic Targeting**.
-    - Налаштуйте бюджет ($ 10/день), базову ставку ($ 0.50 для Close Match, $ 0.30 для інших).
+    - Налаштуйте бюджет (10 доларів/день), базову ставку (0.50 доларів для Close Match, 0.30 доларів для інших).
     - Увімкніть усі типи відповідності: Close Match, Loose Match, Substitutes, Complements.
     - Встановіть Bid Adjustment (+20% для Top of Search).
-3. Дайте кампанії працювати 7 днів, потім створіть **Search Term Report** і **Placements Report**.
-4. Проаналізуйте звіти:
-    - **Search Term Report**: Знайдіть один релевантний запит (ACoS <25%, Conversion Rate >5%) і один нерелевантний (Spend >$ 5, Sales = $ 0).
+2. Дайте кампанії працювати 7 днів, потім створіть **Search Term Report** і **Placements Report**.
+3. Проаналізуйте звіти:
+    - **Search Term Report**: Знайдіть один релевантний запит (ACoS <25%, Conversion Rate >5%) і один нерелевантний (Spend > 5 доларів, Sales = 0).
     - **Placements Report**: Оцініть ефективність плейсментів (наприклад, Top of Search vs. Product Pages).
     - **Substitutes/Complements**: Знайдіть один вигідний ASIN (Sales > Spend) і один невигідний (Sales < Spend).
-5. Виконайте оптимізацію:
+4. Виконайте оптимізацію:
     - Додайте нерелевантний запит до **Negative Keywords** (Negative Exact).
-    - Перенесіть релевантний запит у нову кампанію в **exact match** із бюджетом $ 10/день.
+    - Перенесіть релевантний запит у нову кампанію в **exact match** із бюджетом 10 доларів/день.
     - Додайте вигідний ASIN до Product Targeting (Exact).
     - Додайте невигідний ASIN до **Negative Targets**.
     - Скоригуйте Bid Adjustment (наприклад, +30% для Top of Search, -20% для Product Pages).
-6. Запишіть дії та обґрунтування.
+5. Запишіть дії та обґрунтування.
 
 **Результат**:
 - Опис кампанії (наприклад, "Auto Targeting для ASIN X, кухонний ніж").
-- Аномалії (наприклад, "Запит ‘toy knife’: Spend = $ 8, Sales = $ 0. Product Pages: ACoS = 50%. ASIN Y (Complements): Sales = $ 5, Spend = $ 10").
+- Аномалії (наприклад, "Запит ‘toy knife’: Spend = 8 доларів, Sales = 0. Product Pages: ACoS = 50%. ASIN Y (Complements): Sales = 5 доларів, Spend = 10 доларів").
 - Дії (наприклад, "Додано ‘toy knife’ до Negative Exact. Створено exact match кампанію для ‘sharp kitchen knife’. Додано ASIN Z до Product Targeting. Збільшено Bid Adjustment на 30% для Top of Search").
 - Обґрунтування (наприклад, "Оптимізація знижує витрати на нерелевантний трафік і підвищує ефективність за рахунок релевантних ключів і плейсментів").
 
@@ -126,7 +125,6 @@
 **Перевірте себе**:
 - Чи вдалося налаштувати автоматичну кампанію з усіма типами відповідності?
 - Чи можете виявити релевантні ключові слова та товари для масштабування?
-- Чи готові оптимізувати кампанію на основі звітів?
 
 **Наступний крок**: У Кроці 3 ми розглянемо стратегії масштабування PPC-кампаній через додавання нових ключових слів, розширення Product Targeting і коригування бюджетів.
 ### [[Крок 3 — Масштабування PPC-кампаній]] →
