@@ -2,6 +2,8 @@
 
 > [!note] **Примітка**: Перегляньте відео (0:00–5:19), яке пояснює основи ключових слів, їх частотність і релевантність у контексті Amazon PPC.
 
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/Bx--CQ6WRM0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ---
 ## 1. Що таке ключові слова в Amazon PPC?
 

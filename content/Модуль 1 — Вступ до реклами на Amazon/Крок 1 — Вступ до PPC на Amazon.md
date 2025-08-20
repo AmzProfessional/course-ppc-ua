@@ -1,6 +1,10 @@
 **Мета**: Ознайомитися з основами PPC (Pay-Per-Click) реклами на Amazon, зрозуміти її роль у продажах і визначити основні цілі рекламних кампаній.
 
-> [!note] **Примітка**: Перегляньте коротке вступне відео, яке пояснює, що таке PPC на Amazon і як воно допомагає збільшувати продажі.
+> [!note] **Примітка**: Перегляньте коротке вступне відео, яке пояснює, що таке PPC на Amazon і як воно допомагає збільшувати продажі. 
+
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/Mj4_K6om-rQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> [!warning] Відео має в собі інформацію з усіх кроків першого модуля, після перегляду ознайомлюємося з текстом для закріплення інформації
 
 ---
 ## 1. Що таке PPC на Amazon?

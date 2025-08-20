@@ -2,6 +2,8 @@
 
 > [!note] **Примітка**: Перегляньте відео (0:00–3:34), яке вводить у додаткові інструменти для PPC і пояснює базовий функціонал Seller Sprite для швидкого аналізу видачі.
 
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/jX0OJO-WzI0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ---
 ## 1. Значення додаткових інструментів
 

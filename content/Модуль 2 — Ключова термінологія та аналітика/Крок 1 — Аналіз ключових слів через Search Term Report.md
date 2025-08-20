@@ -2,6 +2,10 @@
 
 > [!note] **Примітка**: Перегляньте відео, яке пояснює, як відкрити та аналізувати Search Term Report у Amazon Advertising Console.
 
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/RIurb04NeVM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> [!warning] Відео має в собі інформацію з усіх кроків другого модуля, після перегляду ознайомлюємося з текстом для закріплення інформації
+
 ---
 ## 1. Значення Search Term Report
 
