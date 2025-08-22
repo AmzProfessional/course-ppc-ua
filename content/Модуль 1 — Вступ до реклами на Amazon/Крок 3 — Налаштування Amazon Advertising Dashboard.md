@@ -41,7 +41,7 @@
 
 ### Кроки роботи:
 
-1. **Увійдіть у Amazon Advertising** і виберіть маркетплейс (наприклад, США).
+1. **Увійдіть у Amazon Advertising**.
 2. **Налаштуйте Dashboard**:
     - У Campaign Manager виберіть період "Вчора".
     - Додайте метрики: Impressions, Clicks, Spend, Sales, ACoS, CTR, Conversion Rate.

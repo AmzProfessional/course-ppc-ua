@@ -59,7 +59,7 @@
 ### **Завдання**: Проведіть комплексний аналіз PPC-кампанії та підготуйте звіт із рекомендаціями.
 
 **Інструкція**:
-1. Увійдіть у Amazon Advertising і виберіть маркетплейс США.
+1. Увійдіть у Amazon Advertising
 2. Виберіть одну кампанію (Sponsored Products, Sponsored Brands або Sponsored Display).
 3. Налаштуйте Dashboard із метриками: Impressions, Clicks, Spend, Sales, ACoS, CTR, Conversion Rate за період "Вчора".
 4. Виконайте сортування за ACoS, CTR і Conversion Rate, щоб знайти аномалії.

@@ -29,7 +29,6 @@
 
 1. **Увійдіть у Amazon Advertising**:
     - Відкрийте Seller Central, перейдіть до **Advertising** → **Campaign Manager**.
-    - Виберіть маркетплейс (наприклад, США).
 2. **Перейдіть до Reports**:
     - У боковому меню виберіть **Sponsored Ads** → **Reports**.
     - Оберіть тип звіту **Search Term Report**.
