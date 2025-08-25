@@ -19,7 +19,7 @@
 
 1. **Налаштування Campaign Manager**:
     - Увійдіть у Seller Central → **Advertising** → **Campaign Manager**.
-    - Виберіть маркетплейс (наприклад, США) і кампанію для аналізу (наприклад, Sponsored Products).
+    - Виберіть маркетплейс США і кампанію для аналізу (наприклад, Sponsored Products).
     - Переконайтеся, що Dashboard містить метрики: Impressions, Clicks, Spend, Sales, ACoS, CTR, Conversion Rate.
 2. **Генерація звітів**:
     - Створіть **Search Term Report** і **Placements Report** за період "Останні 7 днів".
