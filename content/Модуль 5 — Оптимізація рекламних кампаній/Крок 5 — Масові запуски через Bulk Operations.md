@@ -5,7 +5,9 @@
 ---
 ## 1. Значення Bulk Operations
 
-> [!note] Bulk Operations дозволяють масово запускати, оптимізувати або коригувати рекламні кампанії через шаблони, що значно економить час при роботі з великою кількістю кампаній (10–15+).
+> [!note] Bulk Operations дозволяють масово запускати, оптимізувати або коригувати рекламні кампанії через шаблони, що значно економить час при роботі з великою кількістю кампаній (10–15+). 
+> 
+> Якщо потрібно запускати понад 3 рекламні кампанії, балк швидший. Для 2–3 кампаній простіше вручну. На старті освоєння балку може займати більше часу через перевірку та виправлення помилок, але з досвідом він значно прискорює процес.
 
 **Чому це важливо?**
 
@@ -23,58 +25,7 @@
 
 ![[3.png]]
 
-### Кроки створення шаблону:
-
-1. **Завантаження шаблону**:
-    - У Seller Central → Advertising → Campaign Manager → Bulk Operations → Download Template.
-    - Виберіть тип кампаній (наприклад, Sponsored Products), період (наприклад, 30 днів), поставте галочку на потрібних вкладках (Campaigns, Ad Groups, Product Ads, Keywords).
-    - Завантажте і відкрийте файл Excel.
-2. **Заповнення шаблону**:
-    - **Campaigns**:
-        - **Operation**: Create.
-        - **Campaign Name**: Наприклад, "SP_Keyword_Exact_BabyBottle_ASIN123".
-        - **Portfolio ID**: Візьміть ID із вкладки Portfolios у завантаженому файлі (необов’язково).
-        - **Start Date**: Вкажіть дату запуску (наприклад, завтра).
-        - **Targeting Type**: Manual.
-        - **Daily Budget**: 5–10 доларів.
-        - **Bidding Strategy**: Down Only.
-    - **Ad Groups**:
-        - **Operation**: Create.
-        - **Campaign Name**: Повторіть назву кампанії.
-        - **Ad Group Name**: Наприклад, "SP_Keyword_Exact_BabyBottle_ASIN123".
-        - **Status**: Enabled.
-        - **Default Bid**: 1 долар (можна коригувати).
-    - **Product Ads**:
-        - **Operation**: Create.
-        - **Campaign Name, Ad Group Name**: Повторіть назви.
-        - **SKU**: Вкажіть SKU товару (наприклад, "SqueezeBottles346").
-        - **Status**: Enabled.
-    - **Keywords** (для Keyword Targeting):
-        - **Operation**: Create.
-        - **Campaign Name, Ad Group Name**: Повторіть назви.
-        - **Keyword Text**: Наприклад, "baby bottle".
-        - **Match Type**: Exact/Phrase/Broad (наприклад, Exact).
-        - **Bid**: 0.75 долар.
-    - **Product Targeting** (для таргетингу на конкурентів):
-        - **Operation**: Create.
-        - **Campaign Name, Ad Group Name**: Повторіть назви.
-        - **Product Targeting Expression**: Вкажіть ASIN конкурента (наприклад, "asin=B07XYZ123").
-        - **Match Type**: Exact.
-        - **Bid**: 0.50 долар.
-3. **Перевірка SKU і ASIN**:
-    - Переконайтеся, що SKU активний (Seller Central → Inventory → Manage Inventory → Available > 0).
-    - Для Product Targeting використовуйте ASIN конкурентів із топ-видачі за ключем.
-4. **Завантаження файлу**:
-    - У Bulk Operations → Upload File → Виберіть заповнений шаблон → Process Changes.
-    - Очікуйте обробку (2–5 хвилин залежно від кількості кампаній).
-5. **Перевірка результатів**:
-    - У Bulk Operations перевірте статус (Processed або Errors).
-    - Якщо є помилки, відкрийте звіт про помилки, виправте (наприклад, неправильний SKU, дата в минулому) і повторно завантажте.
-6. **Додавання до портфоліо (якщо не вказано ID)**:
-    - У Campaign Manager знайдіть нові кампанії за датою запуску.
-    - Виберіть кампанії → Bulk Actions → Move to Portfolio → Виберіть портфоліо (наприклад, "SqueezeBottles").
-
-### Чек-лист:
+### Чек-лист що бачили у відео:
 
 - [ ]  Завантажити шаблон із Bulk Operations, вибрати Sponsored Products.
 - [ ]  Заповнити вкладки Campaigns, Ad Groups, Product Ads, Keywords/Product Targeting.
