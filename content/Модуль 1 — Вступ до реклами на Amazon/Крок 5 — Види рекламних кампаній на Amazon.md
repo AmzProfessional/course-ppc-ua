@@ -69,11 +69,11 @@
 3. **Перевірте ефективність**:
     - Відкрийте Campaign Manager і оцініть метрики (CTR, ACoS, Sales) за 7 днів.
     - Для Sponsored Products використовуйте **Search Term Report** для аналізу ключових слів.
-    - Для Sponsored Brands перевірте кліки на заголовок і товари.
+    - Для Sponsored Brands перевірте кліки на заголовок і товари, а також Sponsored Brand Search Terms.
     - Для Sponsored Display оцініть Conversion Rate і аудиторію.
 4. **Оптимізуйте кампанію**:
     - Додайте негативні ключові слова для Sponsored Products.
-    - Покращте заголовок чи зображення для Sponsored Brands.
+    - Покращте заголовок чи зображення, додайте негативні ключові слова для Sponsored Brands.
     - Змініть таргетинг для Sponsored Display, якщо Conversion Rate низький.
 
 ---

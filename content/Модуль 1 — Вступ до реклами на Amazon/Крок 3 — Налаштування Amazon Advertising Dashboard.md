@@ -56,7 +56,7 @@
 1. **Увійдіть у Amazon Advertising**.
 2. **Налаштуйте Dashboard**:
     - У Campaign Manager виберіть період "Вчора".
-    - Додайте метрики: Impressions, Clicks, Spend, Sales, ACoS, CTR, Conversion Rate.
+    - Додайте метрики: Impressions, Clicks, Spend, Sales, ACoS, CTR.
 3. **Перегляньте дані**:
     - Перевірте значення метрик і порівняйте їх із цільовими (наприклад, CTR >0.5%, ACoS 10–30%).
     - Зверніть увагу на кампанії з високим ACoS або низьким CTR.
