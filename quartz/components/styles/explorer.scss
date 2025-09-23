@@ -194,6 +194,7 @@ button.desktop-explorer {
 }
 
 .folder-icon {
+  display: none !important;
   margin-right: 5px;
   color: var(--secondary);
   cursor: pointer;
