@@ -185,6 +185,7 @@ export default ((userOpts?: Partial<Options>) => {
       }
 
       // 📌 Пароль для модуля / глобальний
+      // **Не змінюємо цю логіку** — як попросили, паролі працюють і змінювати генерацію не треба.
       function passwordForModule(folderName) {
         const seed = SALT + "::MODULE::" + folderName + "::p" + periodIndex();
         return gen8(seed);
@@ -194,11 +195,17 @@ export default ((userOpts?: Partial<Options>) => {
         return gen8(seed);
       }
 
-      // 🗂️ що є модулем
+      // 🗂️ що є модулем — гнучкіше розпізнавання (ловить "Модуль-8-—-...", "Модуль 4.2", "8 - Назва" тощо)
       const isModuleFolder = (name) => {
         if (!name) return false;
-        const t = name.trim();
-        return /^\\s*\\d+(?:\\.\\d+)?\\s*(модуль|module)/i.test(t) || /^(модуль|module)\\s*\\d+(?:\\.\\d+)?/i.test(t);
+        const t = String(name).trim();
+        // замінимо будь-які дефіси/тире/нижні підкреслення/довгі тире/двоєточчя на пробіл, щоб уніфікувати
+        const s = t.replace(/[-–—_:\\u2014]+/g, " ").replace(/\s+/g, " ").trim();
+        // Якщо є слово "модул..." або "module" поруч з числом — це модуль
+        if (/(?:\\bмодул\\w*\\b|\\bmodule\\b)\\s*\\d+(?:\\.\\d+)?/i.test(s)) return true;
+        // Якщо рядок починається з числа (8, 4.2 та ін.) — теж модуль
+        if (/^\\d+(?:\\.\\d+)?\\b/.test(s)) return true;
+        return false;
       };
 
       // 🎟️ ключ доступу в localStorage (прив’язаний до періоду)
@@ -285,8 +292,16 @@ export default ((userOpts?: Partial<Options>) => {
 
         okBtn && okBtn.addEventListener("click", submit);
         input && input.addEventListener("keydown", function (e) { if (e && e.key === "Enter") submit(); });
-        cancelBtn && cancelBtn.addEventListener("click", function () { cleanup(); resolve(false); });
-        overlay.addEventListener("click", function () { cleanup(); resolve(false); });
+        cancelBtn && cancelBtn.addEventListener("click", function () {
+          cleanup();
+          try { location.href = "/"; } catch(_) {}
+          resolve(false);
+        });    
+        overlay.addEventListener("click", function () {
+          cleanup();
+          try { location.href = "/"; } catch(_) {}
+          resolve(false);
+        });
 
         input && input.focus();
       });
@@ -309,7 +324,7 @@ export default ((userOpts?: Partial<Options>) => {
         }).join("");
 
         if (!rows) {
-          rows = '<tr><td colspan="2" style="padding:10px;opacity:.8">Модулі не знайдені на цій сторінці.</td></tr>';
+          rows = '<tr><td colspan="2" style="padding:10px;opacity:.8;color:#fff">Модулі не знайдені на цій сторінці.</td></tr>';
         }
 
         // Глобальний пароль і кінець періоду
@@ -317,9 +332,9 @@ export default ((userOpts?: Partial<Options>) => {
         var gpwUntil = periodEndISO();
 
         box.innerHTML =
-          '<h3 style="margin:0 0 12px 0;">Актуальні паролі (цього ' + PERIOD_DAYS + '-денного періоду)</h3>' +
-          '<div style="max-height:min(60vh,480px);overflow:auto;border:1px solid #3a3a44;border-radius:10px">' +
-            '<table style="width:100%;border-collapse:collapse;font-size:14px">' +
+          '<h3 style="margin:0 0 12px 0;color:#fff">Актуальні паролі (цього ' + PERIOD_DAYS + '-денного періоду)</h3>' +
+          '<div style="max-height:min(60vh,480px);overflow:auto;border:1px solid #3a3a44;border-radius:10px;background:transparent;color:#fff">' +
+            '<table style="width:100%;border-collapse:collapse;font-size:14px;color:inherit">' +
               '<thead><tr>' +
                 '<th style="text-align:left;padding:8px 10px;border-bottom:1px solid #3a3a44; color:#fff; opacity:.8">Модуль</th>' +
                 '<th style="text-align:left;padding:8px 10px;border-bottom:1px solid #3a3a44; color:#fff; opacity:.8">Пароль</th>' +
@@ -329,10 +344,10 @@ export default ((userOpts?: Partial<Options>) => {
           '</div>' +
 
           // Блок глобального пароля унизу
-          '<div style="margin-top:12px;padding:10px 12px;border:1px dashed #54545f;border-radius:10px;background:#23232b;">' +
-            '<div style="font-weight:600;margin-bottom:6px;">Глобальний пароль (діє до ' + gpwUntil.replace("T"," ").replace("Z"," UTC") + '):</div>' +
+          '<div style="margin-top:12px;padding:10px 12px;border:1px dashed #54545f;border-radius:10px;background:#23232b;color:#fff">' +
+            '<div style="font-weight:600;margin-bottom:6px;color:#fff">Глобальний пароль (діє до ' + gpwUntil.replace("T"," ").replace("Z"," UTC") + '):</div>' +
             '<div style="display:flex;gap:8px;align-items:center;">' +
-              '<div id="gpw-val" style="flex:1;padding:8px 10px;border:1px solid #3a3a44;border-radius:8px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;">' + gpw + '</div>' +
+              '<div id="gpw-val" style="flex:1;padding:8px 10px;border:1px solid #3a3a44;border-radius:8px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#fff">' + gpw + '</div>' +
               '<button id="gp-copy" style="padding:10px 12px;border:0;border-radius:8px;cursor:pointer;background:#5b5bd6;color:#fff">Скопіювати</button>' +
             '</div>' +
           '</div>' +
@@ -361,6 +376,79 @@ export default ((userOpts?: Partial<Options>) => {
         box.querySelector("#pw-close")?.addEventListener("click", cleanup);
         overlay.addEventListener("click", cleanup);
       };
+
+      // ----- START: Access monitor for staying-in-module detection -----
+      // Визначає модуль з URL (повертає нормалізовану першу частину з дефісами → пробіли)
+      function getModuleFromPath() {
+        try {
+          var path = decodeURIComponent(location.pathname || "");
+          var first = path.replace(/^\\/+/, "").split("/")[0] || "";
+          if (!first) return null;
+          // замінюємо дефіси на пробіли, бо в назві можуть бути "Модуль-8-—-..."
+          var candidate = first.replace(/-/g, " ").replace(/_/g, " ").trim();
+          if (isModuleFolder(candidate)) return candidate;
+          // fallback: якщо на сторінці є .folder-title, беремо його
+          var ft = document.querySelector(".folder-title");
+          if (ft && ft.textContent) {
+            var txt = ft.textContent.trim();
+            if (isModuleFolder(txt)) return txt;
+          }
+          return null;
+        } catch (e) { return null; }
+      }
+
+      var _accessMonitorRunning = false;
+      function checkAccessForCurrentModule({ showModalIfMissing = true } = {}) {
+        try {
+          var moduleName = getModuleFromPath();
+          if (!moduleName) return false;
+          if (hasAccess(moduleName)) return true;
+          if (showModalIfMissing) {
+            if (_accessMonitorRunning) return false;
+            _accessMonitorRunning = true;
+            showPasswordModal(moduleName).then(function (ok) {
+              _accessMonitorRunning = false;
+              if (ok) {
+                try { grantAccess(moduleName); } catch(_) {}
+                try { location.reload(); } catch(_) {}
+              } else {
+                // якщо користувач відмовився — повертаємо на HOME
+                try { 
+                  var parts = (location.pathname || "/").split("/").filter(Boolean);
+                  if (parts.length === 0) { location.href = "/"; return; }
+                  // якщо перший сегмент не module-like, намагаємось взяти головну секцію
+                  var home = "/" + parts[0] + "/";
+                  location.href = home;
+                } catch(_) { try { location.href = "/"; } catch(__) {} }
+              }
+            }).catch(function(){ _accessMonitorRunning = false; });
+          }
+          return false;
+        } catch (e) { return false; }
+      }
+
+      function startAccessMonitor() {
+        setTimeout(function(){ checkAccessForCurrentModule({ showModalIfMissing: true }); }, 100);
+
+        window.addEventListener("focus", function () {
+          checkAccessForCurrentModule({ showModalIfMissing: true });
+        }, false);
+
+        document.addEventListener("visibilitychange", function () {
+          if (document.visibilityState === "visible") {
+            checkAccessForCurrentModule({ showModalIfMissing: true });
+          }
+        });
+
+        var intervalMs = 1000;
+        setInterval(function () {
+          checkAccessForCurrentModule({ showModalIfMissing: true });
+        }, intervalMs);
+      }
+
+      // стартуємо монітор
+      startAccessMonitor();
+      // ----- END: Access monitor for staying-in-module detection -----
 
       // === Хоткей Ctrl+Alt+P — показати актуальні паролі
       document.addEventListener("keydown", function (e) {
@@ -402,12 +490,8 @@ export default ((userOpts?: Partial<Options>) => {
       // === Guard для прямих лінків у середину модуля (blur + редірект на домашню) ===
       (function () {
         try {
-          var computeHomePath = function () {
-            var parts = (location.pathname || "/").split("/").filter(Boolean);
-            if (parts.length === 0 || /^\\d+/.test(parts[0]) || /^модуль|module/i.test(decodeURIComponent(parts[0]).replace(/-/g," "))) return "/";
-            return "/" + parts[0] + "/";
-          };
-          var HOME = computeHomePath();
+          // Завжди редіректити на головну сторінку кореня
+          var HOME = "/";
 
           var path = decodeURIComponent(location.pathname || "");
           var first = path.replace(/^\\/+/, "").split("/")[0] || "";
