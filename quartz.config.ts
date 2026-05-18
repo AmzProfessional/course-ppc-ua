@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "AmzProfessional",
+    pageTitle: "PPC",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -23,7 +23,7 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
+        header: "Poppins",        // ← шрифт компанії
         body: "Source Sans Pro",
         code: "IBM Plex Mono",
       },
@@ -34,10 +34,10 @@ const config: QuartzConfig = {
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
           dark: "#2b2b2b",
-          secondary: "#9052cb",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          secondary: "#6F23EE",   // ← основний фіолетовий AMZ
+          tertiary: "#E59E30",    // ← помаранчевий AMZ (був сіро-зелений)
+          highlight: "rgba(111, 35, 238, 0.08)",  // ← фіолетовий натяк
+          textHighlight: "#BC53ED44",
         },
         darkMode: {
           light: "#161618",
@@ -45,10 +45,10 @@ const config: QuartzConfig = {
           gray: "#646464",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
-          secondary: "#9052cb",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          secondary: "#a855f7",   // ← світліший фіолетовий для темної теми
+          tertiary: "#E59E30",    // ← помаранчевий залишається
+          highlight: "rgba(168, 85, 247, 0.10)",
+          textHighlight: "#BC53ED55",
         },
       },
     },
@@ -86,7 +86,6 @@ const config: QuartzConfig = {
       }),
       Plugin.Assets(),
       Plugin.Static(),
-      Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
